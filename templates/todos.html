@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <title>Build a Blog</title>
+    
+
+    
+    <h1>Build a Blog</h1>
+       {% for blog in blogs  %}   <!-- for every blog do this -->
+          
+           
+         <h3> <a href= "/blog?id={{blog.id }}" > {{blog.name}}   </a> </h3>
+                                <!-- blog. id that this belongs too-->
+          <p>{{blog.body}}</p>  <!-- blog comes from main.py and single = Blog.query.get(blog_id)   -->
+
+        {% endfor  %}
+
+    
+
+
+
+
+
+
+{% endblock %}
+
+
